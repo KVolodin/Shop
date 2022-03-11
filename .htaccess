@@ -1,0 +1,7 @@
+AddDefaultCharset utf-8
+RewriteEngine on
+
+RewriteRule /style/([^\/]+).style$ style/$1.css [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
