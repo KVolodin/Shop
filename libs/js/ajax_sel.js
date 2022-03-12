@@ -3,7 +3,7 @@ $('select').change(function () {
     var id = $(this).attr('id');
     $.ajax({
     type: 'POST',
-    url: 'http://localhost/backend+frontend/edit/ajax/',
+    url: 'http://localhost/Shop/edit/ajax/',
     data: 'value=' + value + '&id=' + id + '&field=categories&table=shop',
     success: function (data) {
         $('.ajax').html($('.ajax select :selected').val());

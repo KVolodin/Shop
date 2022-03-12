@@ -14,6 +14,6 @@
             </p>
         <label for="exampleInputEmail1">Цена</label>
         <p><input type="text" name = "price" value="<?php echo $this->run['price'] ?>" class="form-control" placeholder="Цена товара" required id="email"></p>
-        <button class="btn btn-primary" type="submit">Создать</button>
+        <button class="btn btn-primary" type="submit">Изменить</button>
     </form>
 </div>

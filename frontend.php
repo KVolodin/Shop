@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-define('URL', 'http://localhost/backend+frontend/');
+define('URL', 'http://localhost/Shop/');
 define('IMG_DIR', 'libs/images/');
 ?>
 <head>
@@ -18,9 +18,7 @@ define('IMG_DIR', 'libs/images/');
 <body>
 <div class="wrapper">
 <header>
-        <img class="logo" src="<?php echo IMG_DIR; ?>header.png" alt="header.png">
-
-
+    <img class="logo" src="<?php echo IMG_DIR; ?>header.png" alt="header.png">
     <div class="name">
         <h1 class="up">notebookers</h1>
         <t class="up">интернет-магазин ноутбуков</t>

@@ -3,7 +3,7 @@ $(document).ready(function () {
     var id = $(this).data('del');
     answer = confirm('Вы действительно хотите удалить запись с ID ' + id + ' ?')
     if (answer) {
-        location.href = 'http://localhost/backend+frontend/edit/delete/' + id;
+        location.href = 'http://localhost/Shop/edit/delete/' + id;
     }
     });
 });

@@ -5,7 +5,7 @@ class Categories extends Controller {
     }
 
     public function run() {
-    $error = $this->model->run();
+        $error = $this->model->run();
         if (isset($error)) {
             require 'controllers/errors.php';
             $controller = new Errors($error);

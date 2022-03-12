@@ -10,7 +10,7 @@ $(document).on('click', 'td.edit', function () {
     var table = $('table').attr('id');
     $.ajax({
         type: 'POST',
-        url: 'http://localhost/backend+frontend/edit/ajax/',
+        url: 'http://localhost/Shop/edit/ajax/',
         data: 'value=' + $('.ajax input').val() + '&id=' + arr[2] + '&field=' + arr[1] + '&table=' + table,
         success: function (data) {
         $('.ajax').html($('.ajax input').val());
