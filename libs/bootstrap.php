@@ -24,19 +24,19 @@ class Router
         }
     }
 
-    public static function error_page()
+    public static function errorPage()
     {
         require "./controllers/errorsPage.php";
         $controller = new errorsPage("Страницы не существует");
     }
 
-    public static function route_controller($url)
+    public static function routeController($url)
     {
         $file = './controllers/'.$url.'.php';
         if(file_exists($file)) {
             require $file;
         } else {
-            Router::error_page();
+            Router::errorPage();
             return NULL;
         }
         $controller = new $url;
@@ -44,12 +44,12 @@ class Router
         return $controller;
     }
 
-    public static function route_method($controller_name, $method, $arg = NULL)
+    public static function routeMethod($controller_name, $method, $arg = NULL)
     {
-        $controller = Router::route_controller($controller_name);
+        $controller = Router::routeController($controller_name);
         if (isset($controller) && !$controller->call($method, $arg))
         {
-            Router::error_page();
+            Router::errorPage();
         }
     }
 }
@@ -65,13 +65,13 @@ Router::route('/', function(){
 });
 Router::route('/(\w+)', function($controller_name)
 {
-    Router::route_controller($controller_name);
+    Router::routeController($controller_name);
 });
 Router::route('/(\w+)/(\w+)', function($controller_name, $method) {
-    Router::route_method($controller_name, $method);
+    Router::routeMethod($controller_name, $method);
 });
 Router::route('/(\w+)/(\w+)/(\d+)', function($controller_name, $method, $arg){
-    Router::route_method($controller_name, $method, $arg);
+    Router::routeMethod($controller_name, $method, $arg);
 });
 
 class Bootstrap {
