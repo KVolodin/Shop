@@ -1,1 +1,2 @@
-Old project write on php
+Old project written on PHP </br>
+Application with simple MVC architecture
